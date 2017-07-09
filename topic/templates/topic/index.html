@@ -1,0 +1,10 @@
+{% extends 'topic/base.html' %}
+
+{% block body %}
+<h1>List of Blogs</h1>
+<ul>
+{% for blog in all_blogs %}	
+	<li><a  href="/topic/{{ blog.author.id }}/{{ blog.id }}/"> {{ blog.title }} </a></li>
+{% endfor %}
+</ul>
+{% endblock %}

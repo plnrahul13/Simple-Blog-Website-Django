@@ -1,0 +1,10 @@
+{% extends 'topic/base.html' %}
+
+{% block body %}
+<h1>List of all bloggers</h1>
+<ul>
+{% for person in all_people %}	
+	<li><a  href="/topic/{{ person.id }}/"> {{person.name}} </a></li>
+{% endfor %}
+</ul>
+{% endblock %}

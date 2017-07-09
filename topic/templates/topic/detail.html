@@ -1,0 +1,14 @@
+{% extends 'topic/base.html' %}
+
+{% block title %}{{person.name}}{% endblock %}
+
+{% block body %}
+	<b>Name:</b>{{person.name}}<br>
+	<b>Age:</b>{{person.age}}<br>
+	<b>Profession:</b>{{person.profession}}<br>
+	<b>List of Blogs:</b>
+	<ul>
+		{% for blog in all_blogs %}
+			<li><a href="/topic/{{person.id}}/{{blog.id}}/">{{blog.title}}</a></li>
+		{% endfor %}
+{% endblock %}	 	
